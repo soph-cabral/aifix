@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Hello drawing!</title>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" type="text/css" href="css/styles.css">
+</head>
+
+<body>
+  <div class="wrapper" id="app-wrapper-vertical">
+    <div id="app-wrapper-horizontal">
+
+      <!-- UI section -->
+      <fieldset id="sidebar-fieldset">
+        <legend>1. MODEL</legend>
+
+        <div class="control-stack">
+
+          <!-- <div class="control-container border-bottom">
+            <p class="text-small">Swatch</p>
+            <div class="color-swatch" id="color-swatch-stroke"></div>
+          </div> -->
+
+          <div class="control-container border-bottom">
+            <p class="text-small"></p>
+            <div class="cam" id="camera-feed">
+            </div>
+          </div>
+
+          <!-- problems here: we want to pause & save the screen capture(1 frame) when pressing 'p'to display-1 on myCanvas1 -->
+          <div class="control-container border-bottom">
+            <p class="text-small">Step 1: Press "p" to capture!!</p>
+            <div class="display" id="display-1">
+              <div id="display-canvas-container1"></div>
+            </div>
+            <button id="render-button-1" class="button-85" role="button">Render</button>
+          </div>
+
+          <div class="control-container border-bottom">
+            <p class="text-small">Step 2: Capture another image and overlay your creations.</p>
+            <div class="display" id="display-2">
+              <div id="display-canvas-container2"></div>
+            </div>
+            <button id="render-button-2" class="button-85" role="button">Render</button>
+          </div>
+
+
+          <div class="control-container">
+            <p class="text-small"></p>
+            <button id="save-canvas-button" class="button-27" role="button">Save</button>
+            <button id="clear-canvas-button" class="button-27" role="button">Clear</button>
+
+          </div>
+        </div>
+
+
+      </fieldset>
+      <fieldset id="canvas-fieldset">
+        <legend>2. RENDER</legend>
+
+        <div id="canvas-container"></div>
+
+      </fieldset>
+    </div>
+  </div>
+
+
+  <!-- Use full p5.js library when developing locally -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+
+  <!-- Switch to minified version when deploying for production/use -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.min.js"></script> -->
+
+  <!-- Optional addons -->
+  <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script> -->
+
+  <!-- Load the main script at the end of the page, when all the DOM elements are already present -->
+  <script type="text/javascript" src="js/webcam-color-14.js"></script>
+  <script type="text/javascript" src="js/dom-setup.js"></script>
+
+</body>
+
+</html>
